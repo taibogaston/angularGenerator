@@ -1,17 +1,20 @@
-import { Component } from '@angular/core';
-import {Button} from 'primeng/button';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {SidebarModule} from 'primeng/sidebar';
 
 @Component({
   selector: 'app-sidebar',
+  standalone: true,
   imports: [
-    Button,
     SidebarModule
   ],
   templateUrl: './sidebar.component.html',
-  standalone: true,
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
-  sidebarVisible:boolean = false;
+  @Input() sidebarVisibled: boolean = false;
+  @Output() visibleChange = new EventEmitter<boolean>();
+
+  handleClose() {
+    this.visibleChange.emit(this.sidebarVisibled);
+  }
 }

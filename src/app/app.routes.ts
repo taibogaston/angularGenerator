@@ -12,6 +12,6 @@ export const routes: Routes = [
   //RUTAS PRIVADAS
   {
     path: '',
-    loadChildren: ():any => import('./pages/components/privates/home/home.routing').then(m => m.homeRouting)
+    loadChildren: ():any => import('./pages/components/privates/main/main.routing').then(m => m.mainRouting)
   }
 ];

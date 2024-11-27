@@ -1,7 +1,6 @@
-<p-sidebar [(visible)]="sidebarVisible">
+<p-sidebar [(visible)]="sidebarVisibled" (onHide)="handleClose()">
   <h3>Sidebar</h3>
   <p>
-    Lorem ipsum dolor sit amet...
+  Editar a gusto. Para hacerlo siempre visible usar estilos de primeng.
   </p>
 </p-sidebar>
-<p-button (onClick)="sidebarVisible = true" icon="pi pi-arrow-right" />
