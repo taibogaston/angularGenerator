@@ -6,6 +6,7 @@ import {CardModule} from 'primeng/card';
 import {ReactiveFormsModule } from '@angular/forms';
 import {RouterLink} from '@angular/router';
 import {ToastModule} from 'primeng/toast';
+import {CheckboxModule} from 'primeng/checkbox';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ import {ToastModule} from 'primeng/toast';
     CardModule,
     ReactiveFormsModule,
     ToastModule,
-    RouterLink
+    RouterLink,
+    CheckboxModule
   ],
   templateUrl: './login.component.html',
   standalone: true,

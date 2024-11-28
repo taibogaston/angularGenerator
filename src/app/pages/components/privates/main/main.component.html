@@ -1,5 +1,14 @@
-<!--Aqui solo los componentes que se comparten-->
-<nav class="h-7rem sm:h-3rem mb-5">
-<app-menubar></app-menubar>
+<nav class="h-4rem sm:h-2rem">
+  <app-menubar></app-menubar>
 </nav>
-<router-outlet></router-outlet>
+
+<div class="grid-layout">
+  <div class="menu">
+    <app-menu></app-menu>
+  </div>
+  <div class="pt-4 pr-2 w-full">
+    <div style="margin-top: 10px;margin-left: 10px">
+    <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

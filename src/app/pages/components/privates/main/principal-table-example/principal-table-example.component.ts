@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Table, TableModule} from 'primeng/table';
+import {TableModule} from 'primeng/table';
 import {IconFieldModule} from 'primeng/iconfield';
 import {InputIconModule} from 'primeng/inputicon';
 import {MultiSelectModule} from 'primeng/multiselect';
@@ -88,10 +88,8 @@ export class PrincipalTableExampleComponent {
 },
 ];
   products!: any[];
-  constructor() {}
-
-  ngOnInit() {
-      this.products = this.data;
+  constructor() {
+    this.products = this.data;
   }
 
 }

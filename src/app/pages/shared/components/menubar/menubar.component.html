@@ -1,13 +1,31 @@
-<p-megaMenu [model]="items"
-            [style]="{display: 'flex', 'box-shadow': '0 2px 10px rgb(6, 75, 89)'}"
-            styleClass="p-2 surface-0" class="layout-topbar">
-  <ng-template pTemplate="end">
-
+<p-megaMenu  [model]="items"
+            styleClass="p-2 surface-0 flex border-noround" class="layout-topbar">
+  <ng-template pTemplate="start">
     <a href="https://www.encodelabs.com.ar/home" target="_blank">
-      <img src="assets/images/logo.png" alt="Encodelabs" />
+      <img ngSrc="assets/images/logo.png" alt="Encodelabs" height="30" width="163"/>
     </a>
+  </ng-template>
+
+  <ng-template pTemplate="end">
+    <div class="flex align-items-center">
+    <button
+      pRipple
+      class="relative p-link flex align-items-center pl-3 text-color border-noround mr-2">
+      <i class="pi pi-cog" style="font-size: 1.5rem;"></i>
+    </button>
+
+    <button pRipple class="relative p-link flex align-items-center pl-3 text-color border-noround">
+      <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" class="mr-2" shape="circle" />
+      <span class="inline-flex flex-column">
+                <span class="font-bold">Gaston Taibo</span>
+                <span class="text-sm">Admin</span>
+            </span>
+    </button>
+    </div>
   </ng-template>
 </p-megaMenu>
 
 <app-sidebar [sidebarVisibled]="sidebarVisible" (visibleChange)="onSidebarClose($event)"></app-sidebar>
+
+
 

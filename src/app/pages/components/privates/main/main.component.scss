@@ -1,0 +1,12 @@
+.grid-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: calc(100vh - 7rem);
+}
+
+.menu {
+  background-color: #f8f9fa;
+  margin-top: -5px;
+  margin-left: -7px;
+}
+

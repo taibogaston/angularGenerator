@@ -3,6 +3,11 @@ import {MegaMenuItem} from 'primeng/api';
 import {MegaMenuModule} from 'primeng/megamenu';
 import {SidebarComponent} from '../sidebar/sidebar.component';
 import {SidebarModule} from 'primeng/sidebar';
+import {MenuModule} from 'primeng/menu';
+import {AvatarModule} from 'primeng/avatar';
+import {BadgeModule} from 'primeng/badge';
+import {NgOptimizedImage} from '@angular/common';
+import {Ripple} from 'primeng/ripple';
 
 
 @Component({
@@ -12,6 +17,11 @@ import {SidebarModule} from 'primeng/sidebar';
     MegaMenuModule,
     SidebarComponent,
     SidebarModule,
+    MenuModule,
+    AvatarModule,
+    BadgeModule,
+    NgOptimizedImage,
+    Ripple,
   ],
   templateUrl: './menubar.component.html',
   styleUrl: './menubar.component.scss'
@@ -21,7 +31,6 @@ export class MenubarComponent implements OnInit {
 
   items: MegaMenuItem[] | undefined;
   sidebarVisible: boolean = false;
-  isDarkMode:boolean = false;
 
   ngOnInit(): void {
     this.cargarItemsDelMenu();
@@ -30,15 +39,10 @@ export class MenubarComponent implements OnInit {
   cargarItemsDelMenu() {
     this.items = [
       {
-        label: 'Menú',
         icon: 'pi pi-bars',
         command: () => this.sidebarVisible = true,
         style: {color: '#007bff', fontWeight: 'bold'},
-      },
-      {
-        label: `Tu usuario`,
-        icon: 'pi pi-user',
-        style: { color: '#007bff', fontWeight: 'bold' },
+        styleClass: 'md:hidden',
       },
     ];
   }
