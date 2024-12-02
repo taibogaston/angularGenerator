@@ -3,11 +3,7 @@ import { MainComponent } from './main.component';
 
 export const mainRouting: Routes = [
 
-  // Redirección por defecto
-  { path: '', redirectTo: 'main/inicio', pathMatch: 'full' },
-
-
-   // Rutas principales
+  // Rutas principales
   {
     path: 'main',
     component: MainComponent,
@@ -15,13 +11,18 @@ export const mainRouting: Routes = [
       {
         path: 'inicio',
         loadChildren: () =>
-          import('./home/home.routing').then(m => m.homeRouting)
-      }
-    ]
+          import('./home/home.routing').then(m => m.homeRouting),
+      },
+      {
+        path: 'roles',
+        loadChildren: () =>
+          import('./roles/roles.routing').then(m => m.rolesRouting),
+      },
+      { path: '', redirectTo: 'main/inicio', pathMatch: 'full' },
+    ],
+
   },
-  //Fin Rutas principales
 
-
-  // Redirección para rutas no encontradas
-  { path: '**', redirectTo: 'main/inicio', pathMatch: 'full' }
+  // Redirección para rutas no encontradas fuera de 'main'
+  { path: '**', redirectTo: 'main/inicio', pathMatch: 'full' },
 ];

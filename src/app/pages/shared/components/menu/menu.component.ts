@@ -5,6 +5,7 @@ import {AvatarModule} from 'primeng/avatar';
 import {BadgeModule} from 'primeng/badge';
 import {Ripple} from 'primeng/ripple';
 import {Router} from '@angular/router';
+import {ThemeSelectorComponent} from '../../theme-selector/theme-selector.component';
 
 @Component({
   selector: 'app-menu',
@@ -13,7 +14,8 @@ import {Router} from '@angular/router';
     MenuModule,
     AvatarModule,
     BadgeModule,
-    Ripple
+    Ripple,
+    ThemeSelectorComponent
   ],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'

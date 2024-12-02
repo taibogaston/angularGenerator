@@ -4,6 +4,7 @@
   </ng-template>
   <ng-template pTemplate="submenuheader" let-item>
     <span class="text-primary font-bold">{{ item.label }}</span>
+
   </ng-template>
   <ng-template pTemplate="item" let-item>
     <a pRipple class="flex align-items-center p-menuitem-link">
@@ -20,5 +21,12 @@
       }
 
     </a>
+
   </ng-template>
+  <ng-template pTemplate="end">
+    <div class="pb-0 flex justify-content-center align-content-center">
+      <app-theme-selector></app-theme-selector>
+    </div>
+  </ng-template>
+
 </p-menu>

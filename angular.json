@@ -6,6 +6,7 @@
     "AngularDefaultGenerator": {
       "projectType": "application",
       "schematics": {
+        "standalone": true,
         "@schematics/angular:component": {
           "style": "scss"
         }
