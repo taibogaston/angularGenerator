@@ -42,7 +42,7 @@ export class MenubarComponent implements OnInit {
         icon: 'pi pi-bars',
         command: () => this.sidebarVisible = true,
         style: {color: '#007bff', fontWeight: 'bold'},
-        styleClass: 'md:hidden',
+        styleClass: 'xl:hidden',
       },
     ];
   }

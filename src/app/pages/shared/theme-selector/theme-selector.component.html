@@ -1,0 +1,9 @@
+<p-cascadeSelect
+  class="max-w-full"
+  [options]="themes"
+  optionLabel="cname"
+  optionGroupLabel="name"
+  [optionGroupChildren]="['states', 'cities']"
+  placeholder="Seleccion tu tema"
+  (onChange)="changeTheme($event)"
+/>

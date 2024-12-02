@@ -1,10 +1,10 @@
 .layout-menu {
-  position: sticky;
+  position: fixed;
   top: 3.6rem;
   z-index: 999;
 }
 
-@media (max-width: 575px){
+@media (max-width: 768px){
   ::ng-deep .p-menu{
   display: none;
   }

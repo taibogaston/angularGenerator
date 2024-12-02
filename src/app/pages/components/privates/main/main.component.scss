@@ -5,8 +5,11 @@
 }
 
 .menu {
-  background-color: #f8f9fa;
-  margin-top: -5px;
-  margin-left: -7px;
+  width: 250px; // Ancho fijo del sidebar
+  min-width: 200px; // Opcional, para manejar anchos mínimos
 }
 
+.main-container {
+  display: flex;
+  height: calc(100vh - 4rem); // Ajusta la altura total restando el tamaño del menú superior
+}

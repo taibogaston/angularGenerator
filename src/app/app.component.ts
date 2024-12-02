@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {ThemeSelectorService} from './core/services/theme-selector.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,15 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'AngularDefaultGenerator';
 
-  constructor() {
+  constructor(private themeSelector: ThemeSelectorService) {}
+
+  ngOnInit() {
+    if(localStorage.getItem('selectedTheme')){
+      this.themeSelector.selectTheme(localStorage.getItem('selectedTheme'));
+    }
   }
 
 }

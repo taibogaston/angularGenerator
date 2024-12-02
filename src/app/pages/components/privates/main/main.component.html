@@ -1,14 +1,15 @@
-<nav class="h-4rem sm:h-2rem">
+<nav class="h-4rem sm:h-2rem mb-5">
   <app-menubar></app-menubar>
 </nav>
 
-<div class="grid-layout">
-  <div class="menu">
+<main class="main-container ocultarEnMobile">
+  <aside class="menu ocultarEnTabletMini">
     <app-menu></app-menu>
-  </div>
-  <div class="pt-4 pr-2 w-full">
-    <div style="margin-top: 10px;margin-left: 10px">
+  </aside>
+
     <router-outlet></router-outlet>
-    </div>
-  </div>
+</main>
+
+<div class="md:hidden">
+<router-outlet></router-outlet>
 </div>

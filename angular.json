@@ -29,17 +29,7 @@
                 "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              {
-                "input": "src/theme-dark.css",
-                "bundleName": "theme-dark",
-                "inject": false
-              },
-              {
-                "input": "src/theme-light.css",
-                "bundleName": "theme-light",
-                "inject": false
-              }
+              "src/styles.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",

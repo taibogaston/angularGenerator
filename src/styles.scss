@@ -5,6 +5,12 @@
 
 body {
   background-color: $backgroundLienzo;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 span {
@@ -30,3 +36,18 @@ tr {
     height: 100%;
     font-family: $font-family;
 }
+
+@media screen and (max-width: 760px) {
+  .ocultarEnMobile{
+    display:none !important;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .ocultarEnTabletMini{
+    display:none !important;
+  }
+
+}
+

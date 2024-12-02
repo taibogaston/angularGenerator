@@ -5,7 +5,6 @@ import {InputIconModule} from 'primeng/inputicon';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {DropdownModule} from 'primeng/dropdown';
 import {TagModule} from 'primeng/tag';
-import {NgClass} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 
 @Component({
@@ -18,7 +17,6 @@ import {FormsModule} from '@angular/forms';
     MultiSelectModule,
     DropdownModule,
     TagModule,
-    NgClass,
     FormsModule
   ],
   templateUrl: './principal-table-example.component.html',
